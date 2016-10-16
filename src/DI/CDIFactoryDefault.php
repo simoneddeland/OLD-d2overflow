@@ -153,5 +153,27 @@ class CDIFactoryDefault extends CDI
             $filter->configure(ANAX_APP_PATH . 'config/text_filter.php');
             return $filter;
         });
+
+        $this->setShared('db', function () {
+            $db = new \Mos\Database\CDatabaseBasic();
+            $db->setOptions(require ANAX_APP_PATH . 'config/database_sqlite.php');
+            $db->connect();
+            return $db;
+        });
+
+        $this->setShared('logger', function () {
+            $logger = new \ultimadark\Logger\CLog();
+            return $logger;
+        });
+
+        $this->setShared('authenticator', function () {
+            $authenticator = new \Anax\Authenticator\Authenticator();
+            $authenticator->setDI($this);
+            return $authenticator;
+        });
+
+        $this->set('form', '\Mos\HTMLForm\CForm');
+
+
     }
 }

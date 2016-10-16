@@ -38,8 +38,8 @@
 .navbar li.selected-parent, 
 .navbar li.is-parent, 
 .navbar li.selected {
-  color: #22f; 
-  border-color: #22f;
+  color: #900; 
+  border-color: #900;
 }
 
 .navbar ul ul {

@@ -20,6 +20,8 @@
     <exclude-pattern>*.js</exclude-pattern>
     <exclude-pattern>test/config.php</exclude-pattern>
     <exclude-pattern>webroot/test</exclude-pattern>
+    <exclude-pattern>lessc.inc.php</exclude-pattern>
+    <exclude-pattern>*/lessphp/*</exclude-pattern>
 
     <arg name="encoding" value="utf-8"/>
     <arg name="warning-severity" value="0"/>
@@ -31,6 +33,9 @@
         <exclude name="Squiz.WhiteSpace.SuperfluousWhitespace" />
         <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingAfterOpen" />
         <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingBeforeClose" />
+        <exclude-pattern>lessc.inc.php</exclude-pattern>
+        <exclude-pattern>*/lessc.inc.php</exclude-pattern>
+        <exclude-pattern>*/lessphp/*</exclude-pattern>
     </rule>
     
 </ruleset>
